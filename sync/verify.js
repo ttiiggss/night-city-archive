@@ -102,4 +102,13 @@ ok(new Set(cards.map((c) => c.slug)).size === cards.length, "slugs unique");
 const imgsOk = cards.every((c) => fs.existsSync(path.join(ROOT, "images", c.slug + ".webp")));
 ok(imgsOk, "every card has a local render in images/");
 
+console.log("== markup structure ==");
+const gridHTML = els["#grid"].innerHTML;
+const openDivs = (gridHTML.match(/<div\b/g) || []).length;
+const closeDivs = (gridHTML.match(/<\/div>/g) || []).length;
+ok(openDivs === closeDivs, `grid HTML div tags balanced (${openDivs} open / ${closeDivs} close)`);
+ok(!/<\/(cbar|cname|chip|mini)>/.test(gridHTML), "no bogus custom closing tags in grid HTML");
+const tileCount = (gridHTML.match(/class="card"/g) || []).length;
+ok(tileCount === 145, `145 card tiles rendered (got ${tileCount})`);
+
 process.exit(failures ? 1 : 0);
