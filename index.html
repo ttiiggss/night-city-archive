@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NIGHT CITY ARCHIVE — Cyberpunk TCG Wiki</title>
+<meta name="description" content="Unofficial fan wiki for the Cyberpunk Trading Card Game. Card database, rules compendium, and news. Auto-synced from the official card database.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scanlines" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">NIGHT&nbsp;CITY&nbsp;ARCHIVE</a>
+    <nav>
+      <a href="#cards">CARDS</a>
+      <a href="#rules">RULES</a>
+      <a href="#faq">FAQ</a>
+      <a href="#changelog">CHANGELOG</a>
+      <a href="#sources">SOURCES</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <div class="kicker">// UNOFFICIAL FAN WIKI — CYBERPUNK TRADING CARD GAME</div>
+      <h1>BUILD YOUR CREW.<br>EARN YOUR LEGEND.</h1>
+      <p class="sub">Card database, rules compendium &amp; release intel for the official Cyberpunk TCG by WeirdCo × CD PROJEKT RED. Auto-synced from the official card database.</p>
+      <div id="hero-stats" class="stat-chips"></div>
+      <div class="hero-cta">
+        <a class="btn btn-yellow" href="#cards">EXPLORE THE DATABASE</a>
+        <a class="btn btn-ghost" href="#rules">LEARN THE RULES</a>
+      </div>
+    </div>
+    <div id="hero-cards" class="hero-cards" aria-hidden="true"></div>
+  </section>
+
+  <!-- CARD DATABASE -->
+  <section id="cards" class="section">
+    <h2><span class="hash">##</span> CARD DATABASE</h2>
+    <div class="controls">
+      <input id="q" type="search" placeholder="Search name, rules text, tag…" autocomplete="off" spellcheck="false">
+      <div class="filter-row">
+        <select id="f-type"><option value="">TYPE: ALL</option></select>
+        <select id="f-color"><option value="">COLOR: ALL</option></select>
+        <select id="f-rarity"><option value="">RARITY: ALL</option></select>
+        <select id="f-set"><option value="">SET: ALL</option></select>
+        <select id="f-tag"><option value="">TAG: ALL</option></select>
+        <select id="sort">
+          <option value="name">SORT: NAME</option>
+          <option value="cost">SORT: COST ↓</option>
+          <option value="power">SORT: POWER ↓</option>
+          <option value="new">SORT: NEWEST</option>
+        </select>
+      </div>
+    </div>
+    <div class="result-line"><span id="count">0</span> cards <span id="active-filters"></span></div>
+    <div id="grid" class="grid"></div>
+    <div id="empty" class="empty" hidden>NO CARDS MATCH. Even Rogue Aires can't find that one.</div>
+  </section>
+
+  <!-- RULES -->
+  <section id="rules" class="section">
+    <h2><span class="hash">##</span> RULES COMPENDIUM</h2>
+    <p class="src-note">Source: official <em>Cyberpunk TCG Alpha Gameplay Guide</em> (WeirdCo). Confirmed to the Alpha ruleset — retail release may adjust values. If a card's text conflicts with the guide, the card wins.</p>
+
+    <div class="rule-cols">
+      <div class="rule-block">
+        <h3>WIN CONDITION</h3>
+        <ul>
+          <li><strong>7 Gigs to win:</strong> start your turn with 7+ Gig dice in your Gig area and you win instantly.</li>
+          <li><strong>Overtime:</strong> after the last player's 7th turn, sudden death — a majority of Gigs wins instantly.</li>
+          <li><strong>Deckout:</strong> if you must draw with an empty deck, your Rival wins.</li>
+        </ul>
+      </div>
+      <div class="rule-block">
+        <h3>TURN STRUCTURE</h3>
+        <ol>
+          <li><strong>Start Phase (in order):</strong> ready spent cards → draw 1 → gain a Gig (roll a die from your Fixer area, any except the d20, which is always last).</li>
+          <li><strong>Main Phase (any order):</strong> sell one card for an Eddie (once/turn) → play Units / Gear / Programs → Call a Legend (1 €$, once/turn) → attack with Units.</li>
+        </ol>
+      </div>
+      <div class="rule-block">
+        <h3>COMBAT</h3>
+        <ul>
+          <li>Attacking spends the Unit. Target a <em>spent</em> rival Unit (fight: compare power, loser is trashed, ties kill both) or the rival Gig area (steal a Gig).</li>
+          <li>Steal scaling: power 1+ = 1 Gig, 10+ = 2, 20+ = 3…</li>
+          <li>Reactions: <strong>Quick</strong> effects and <strong>Blocker</strong> Units can interrupt attacks. Ready Units can't be attacked.</li>
+        </ul>
+      </div>
+      <div class="rule-block">
+        <h3>ECONOMY — EDDIES (€$)</h3>
+        <ul>
+          <li>Once per turn, sell a card from hand (any with a sell tag) face-down into your Eddies area: worth 1 €$.</li>
+          <li>Legends (face-up or face-down) can each be spent as 1 €$.</li>
+          <li>Call a Legend: 1 €$ to flip one face-up at random, once per turn.</li>
+        </ul>
+      </div>
+      <div class="rule-block">
+        <h3>CARD TYPES</h3>
+        <ul>
+          <li><strong>Legend</strong> — your deck's 3 centerpiece characters; random face-down order.</li>
+          <li><strong>Unit</strong> — crew members; enter with <strong>Lag</strong> (can't attack the turn played).</li>
+          <li><strong>Program</strong> — one-shot effect, then to trash.</li>
+          <li><strong>Gear</strong> — attach to Units/Legends; goes with them when they move.</li>
+        </ul>
+      </div>
+      <div class="rule-block">
+        <h3>DECK BUILDING — RAM</h3>
+        <ul>
+          <li>Your 3 Legends provide colored <strong>RAM</strong>; each card needs RAM of matching colors.</li>
+          <li>Your Legends' total RAM must cover every card in the deck — the Legends define your color identity.</li>
+          <li>Colors: Red / Blue / Green / Yellow.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="gloss-title">GLOSSARY (SELECTED)</h3>
+    <div class="gloss">
+      <div><dt>Street Cred</dt><dd>Sum of your Gig dice values; unlocks powerful card effects.</dd></div>
+      <div><dt>Lag</dt><dd>All Units enter with it — can't attack or self-spend the turn they're played.</dd></div>
+      <div><dt>Go Solo</dt><dd>Pay a Legend's cost to play it as a ready Unit; if it leaves the field, remove it from the game.</dd></div>
+      <div><dt>Quick</dt><dd>May be activated / played as a reaction when a rival Unit attacks.</dd></div>
+      <div><dt>Blocker</dt><dd>Spend this Unit to redirect an attack to it.</dd></div>
+      <div><dt>Bottom-Deck</dt><dd>Put cards at the bottom of your deck in any order.</dd></div>
+      <div><dt>Trash</dt><dd>Put the top card of your deck into your trash (trashed N if a number is given).</dd></div>
+      <div><dt>Fixer Area</dt><dd>Where all your dice start; feed one into your Gig area each turn.</dd></div>
+    </div>
+    <p class="src-note">Full detail: <a href="https://www.weirdco.net/s/Cyberpunk-TCG-Alpha-Gameplay-Guide.pdf" target="_blank" rel="noopener">official Alpha Gameplay Guide PDF ↗</a> · <a href="https://cyberpunktcg.com/docs/print-and-play-mercs.pdf" target="_blank" rel="noopener">Print &amp; Play demo decks ↗</a></p>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <h2><span class="hash">##</span> FAQ — RELEASE &amp; PRODUCT</h2>
+    <p class="src-note">Source: official Kickstarter FAQ at cyberpunktcg.com/faq.</p>
+    <div class="faq-list">
+      <details><summary>When do Kickstarter rewards ship?</summary><p>Two waves. Wave 1 (starter decks, Beta booster displays — from Netrunner Starter Kit tier and up) begins fulfillment <strong>Q3 2026</strong> express. Wave 2 (accessories, Beta Box, Lucy cards, Common Cyberdecks tier) begins <strong>Q4 2026</strong> standard.</p></details>
+      <details><summary>What's in the Beta Box?</summary><p>Free for Netrunner Starter Pack tier and above: 1 booster pack, zoned rubber playmat, all stretch-goal Legends, and more — grows as stretch goals unlock.</p></details>
+      <details><summary>Kickstarter vs retail differences?</summary><p>Kickstarter decks carry a Beta symbol; retail products won't. KS Beta products include exclusive art variants, and each starter deck has 5 mechanically unique cards exclusive to that product.</p></details>
+      <details><summary>Free Lucy promo card?</summary><p>Email newsletter signups before Jan 21, 2026 get a non-foil Nova Rare Lucy; campaign followers who backed get a foil Nova Rare Lucy with rewards.</p></details>
+      <details><summary>Which languages?</summary><p>Kickstarter cards are English-only; more languages (French confirmed in progress) are planned.</p></details>
+      <details><summary>Try before retail?</summary><p>Yes — official Print &amp; Play demo decks: <em>The Heist</em> (Mercs) and <em>Embracing Power</em> (Arasaka), free PDFs on cyberpunktcg.com.</p></details>
+    </div>
+  </section>
+
+  <!-- CHANGELOG -->
+  <section id="changelog" class="section">
+    <h2><span class="hash">##</span> SYNC CHANGELOG</h2>
+    <p class="src-note">Every time this wiki re-syncs with the official card database, new and changed cards land here. Fresh data, no chaff.</p>
+    <div id="changelog-list"></div>
+  </section>
+
+  <!-- SOURCES -->
+  <section id="sources" class="section">
+    <h2><span class="hash">##</span> SOURCES &amp; DISCLAIMER</h2>
+    <ul class="sources">
+      <li><a href="https://cyberpunktcg.com" target="_blank" rel="noopener">cyberpunktcg.com</a> — official site &amp; card database</li>
+      <li><a href="https://www.weirdco.net" target="_blank" rel="noopener">weirdco.net</a> — publisher (WeirdCo × CD PROJEKT RED)</li>
+      <li><a href="https://www.weirdco.net/s/Cyberpunk-TCG-Alpha-Gameplay-Guide.pdf" target="_blank" rel="noopener">Alpha Gameplay Guide PDF</a> — rules source</li>
+      <li><a href="https://www.kickstarter.com/projects/cyberpunktcg/the-official-cyberpunk-trading-card-game" target="_blank" rel="noopener">Kickstarter campaign</a> — product &amp; fulfillment info</li>
+    </ul>
+    <p class="disclaimer">Unofficial fan project. Cyberpunk TCG, card data, art and names © CD PROJEKT S.A. / WeirdCo. This wiki claims no ownership and follows the data published by the official card database. Built and maintained by NetrunnerGM.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>NIGHT CITY ARCHIVE // fan wiki</span>
+    <span id="sync-stamp"></span>
+  </div>
+</footer>
+
+<!-- CARD MODAL -->
+<div id="modal" class="modal" hidden>
+  <div class="modal-backdrop"></div>
+  <div class="modal-card">
+    <button class="modal-close" aria-label="Close">×</button>
+    <div class="modal-img"><img id="m-img" alt=""></div>
+    <div class="modal-info">
+      <div class="m-topline"><span id="m-type" class="chip"></span><span id="m-color" class="chip"></span><span id="m-rarity" class="chip"></span></div>
+      <h3 id="m-name"></h3>
+      <p id="m-sub" class="m-sub"></p>
+      <div class="m-stats" id="m-stats"></div>
+      <div id="m-rules" class="m-rules"></div>
+      <p id="m-flavor" class="m-flavor"></p>
+      <div class="m-meta" id="m-meta"></div>
+      <a id="m-link" class="btn btn-ghost" target="_blank" rel="noopener">VIEW ON OFFICIAL SITE ↗</a>
+    </div>
+  </div>
+</div>
+
+<script src="data/data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
