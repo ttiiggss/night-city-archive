@@ -140,7 +140,7 @@ function cardTile(c) {
       ${c.cost != null ? `<span class="mini">€$${esc(c.cost)}</span>` : ""}
       ${c.power != null ? `<span class="mini">PWR ${esc(c.power)}</span>` : ""}
       ${c.rarity ? `<span class="mini">${esc(c.rarity)}</span>` : ""}
-    </cbar>
+    </div>
   </div>`;
 }
 
