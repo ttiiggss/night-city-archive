@@ -32,7 +32,7 @@ body {
 }
 a { color: var(--cyan); text-decoration: none; }
 a:hover { text-decoration: underline; }
-.wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+.wrap { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
 
 /* HEADER */
 header {
@@ -110,8 +110,10 @@ h2 {
 .result-line { color: var(--dim); font-size: .78rem; margin-bottom: 16px; letter-spacing: .05em; }
 #active-filters { color: var(--cyan); }
 
-/* GRID */
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(185px, 1fr)); gap: 14px; }
+/* GRID — fixed column counts: 4 wide / 3 mid / 2 small */
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+@media (max-width: 1000px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 680px)  { .grid { grid-template-columns: repeat(2, 1fr); } }
 .card {
   background: var(--bg2); border: 1px solid var(--line); border-radius: 6px;
   overflow: hidden; cursor: pointer; transition: transform .12s, border-color .12s, box-shadow .12s;

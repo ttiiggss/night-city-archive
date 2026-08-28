@@ -38,6 +38,21 @@ def main():
     dest = os.path.join(ROOT, "data", "data.js")
     with open(dest, "w", encoding="utf-8") as f:
         f.write(out)
+    # cache-bust: bump the ?v= on the data.js reference in index.html so
+    # returning visitors always load fresh card data (Pages/browser caches)
+    idx = os.path.join(ROOT, "index.html")
+    try:
+        html = open(idx, encoding="utf-8").read()
+        import re
+        html_new = re.sub(r'data/data\.js\?v=\d+', f'data/data.js?v={int(__import__("time").time())}', html)
+        if "data/data.js?v=" not in html_new:
+            html_new = html_new.replace('src="data/data.js"', f'src="data/data.js?v={int(__import__("time").time())}"')
+        if html_new != html:
+            with open(idx, "w", encoding="utf-8") as f:
+                f.write(html_new)
+            print("OK: bumped data.js cache-buster in index.html")
+    except FileNotFoundError:
+        pass
     print(f"OK: wrote {dest} ({len(payload['cards'])} cards, {len(changelog)} changelog entries)")
 
 
