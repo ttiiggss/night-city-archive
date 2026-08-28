@@ -1,5 +1,26 @@
 [
  {
+  "date": "2026-08-28",
+  "synced_at": "2026-08-28 23:51 UTC",
+  "card_count": 147,
+  "added": [],
+  "changed": [],
+  "images_ok": 147,
+  "images_failed": 0
+ },
+ {
+  "date": "2026-08-28",
+  "synced_at": "2026-08-28 23:51 UTC",
+  "card_count": 147,
+  "added": [
+   "Detonate",
+   "MaxTac Heavy"
+  ],
+  "changed": [],
+  "images_ok": 147,
+  "images_failed": 0
+ },
+ {
   "date": "2026-08-27",
   "synced_at": "2026-08-27 23:50 UTC",
   "card_count": 145,

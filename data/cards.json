@@ -2,9 +2,9 @@
  "meta": {
   "source": "Official Cyberpunk TCG card database (api.netdeck.gg backend behind cyberpunktcg.com)",
   "source_site": "https://cyberpunktcg.com/cards",
-  "synced_at": "2026-08-27 23:50 UTC",
-  "api_total": 145,
-  "card_count": 145,
+  "synced_at": "2026-08-28 23:51 UTC",
+  "api_total": 147,
+  "card_count": 147,
   "sets": [
    "PRM01",
    "embracingpowerretailstarterdeck",
@@ -1150,6 +1150,36 @@
    "ram": 2,
    "artist": "Fabrizio De Tommaso",
    "print_number": "027",
+   "printings": [],
+   "legality": "legal"
+  },
+  {
+   "id": "2697ed9d-72fc-4658-9c94-977668911a67",
+   "external_id": "cb-detonate",
+   "name": "Detonate",
+   "subname": null,
+   "display_name": "Detonate",
+   "slug": "detonate",
+   "rules_text": "{Quick} Defeat a rival Gear with power 2 or less.",
+   "flavor_text": null,
+   "printing_id": "bec995b7-b76b-4605-9c36-3d7697cdd4f5",
+   "set": {
+    "code": "welcometonightcityretail",
+    "name": "Welcome to Night City — Retail"
+   },
+   "rarity": "Common",
+   "color": "Red",
+   "card_type": "Program",
+   "is_eddiable": true,
+   "classifications": [
+    "Quickhack"
+   ],
+   "keywords": [],
+   "cost": 1,
+   "power": null,
+   "ram": 2,
+   "artist": "Michal Ivan",
+   "print_number": "031",
    "printings": [],
    "legality": "legal"
   },
@@ -3146,6 +3176,36 @@
    "ram": 4,
    "artist": "Ilya Kuvshinov",
    "print_number": "085",
+   "printings": [],
+   "legality": "legal"
+  },
+  {
+   "id": "78fee308-5d4e-491c-9596-423dc20da5e3",
+   "external_id": "cb-maxtac-heavy",
+   "name": "MaxTac Heavy",
+   "subname": null,
+   "display_name": "MaxTac Heavy",
+   "slug": "maxtac-heavy",
+   "rules_text": "Play this Unit for -1 €$ for each of a Rival’s Units, to a minimum of 1 €$.",
+   "flavor_text": null,
+   "printing_id": "060f0c56-cbb7-45fd-a0cd-9c7b9d0f8103",
+   "set": {
+    "code": "welcometonightcityretail",
+    "name": "Welcome to Night City — Retail"
+   },
+   "rarity": "Uncommon",
+   "color": "Green",
+   "card_type": "Unit",
+   "is_eddiable": false,
+   "classifications": [
+    "NCPD"
+   ],
+   "keywords": [],
+   "cost": 7,
+   "power": 8,
+   "ram": 3,
+   "artist": "Olgierd Ciszak",
+   "print_number": "081",
    "printings": [],
    "legality": "legal"
   },

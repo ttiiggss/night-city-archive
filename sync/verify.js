@@ -45,13 +45,15 @@ vm.createContext(ctx);
 vm.runInContext(fs.readFileSync(path.join(ROOT, "data", "data.js"), "utf8"), ctx, { filename: "data.js" });
 vm.runInContext(fs.readFileSync(path.join(ROOT, "app.js"), "utf8"), ctx, { filename: "app.js" });
 
+const N = window.ARCHIVE_DATA.cards.length;
+
 // init() ran on load; give the fallback fetch path no chance (ARCHIVE_DATA present)
 const count = () => els["#count"].textContent;
 const gridCards = () => (els["#grid"].innerHTML.match(/class="card"/g) || []).length;
 
 console.log("== boot ==");
-ok(window.ARCHIVE_DATA.cards.length === 145, `archive loaded with 145 cards (got ${window.ARCHIVE_DATA.cards.length})`);
-ok(Number(count()) === 145, `grid shows 145 cards (got ${count()})`);
+ok(window.ARCHIVE_DATA.cards.length === N, `archive loaded with ${N} cards (got ${window.ARCHIVE_DATA.cards.length})`);
+ok(Number(count()) === N, `grid shows ${N} cards (got ${count()})`);
 ok(els["#sync-stamp"].textContent.includes("SYNCED"), "sync stamp rendered: " + JSON.stringify(els["#sync-stamp"].textContent));
 ok((els["#hero-stats"].innerHTML.match(/chip/g) || []).length >= 5, "hero stat chips rendered");
 ok(els["#hero-cards"].innerHTML.includes("<img"), "hero card images rendered");
@@ -64,7 +66,7 @@ console.log("== search ==");
 els["#q"].value = "smasher";
 els["#q"].dispatch("input");
 const smasherN = Number(count());
-ok(smasherN >= 1 && smasherN < 145, `search 'smasher' narrows results (got ${smasherN})`);
+ok(smasherN >= 1 && smasherN < N, `search 'smasher' narrows results (got ${smasherN})`);
 els["#q"].value = "braindance";
 els["#q"].dispatch("input");
 ok(Number(count()) >= 1, "search 'braindance' finds cards (got " + count() + ")");
@@ -84,7 +86,7 @@ els["#f-type"].dispatch("change"); els["#f-color"].dispatch("change");
 console.log("== sort ==");
 els["#sort"].value = "power";
 els["#sort"].dispatch("change");
-ok(Number(count()) === 145, "sort keeps all 145 cards");
+ok(Number(count()) === N, "sort keeps all cards");
 
 console.log("== modal ==");
 vm.runInContext("openModal('v-streetkid')", ctx);
@@ -109,6 +111,6 @@ const closeDivs = (gridHTML.match(/<\/div>/g) || []).length;
 ok(openDivs === closeDivs, `grid HTML div tags balanced (${openDivs} open / ${closeDivs} close)`);
 ok(!/<\/(cbar|cname|chip|mini)>/.test(gridHTML), "no bogus custom closing tags in grid HTML");
 const tileCount = (gridHTML.match(/class="card"/g) || []).length;
-ok(tileCount === 145, `145 card tiles rendered (got ${tileCount})`);
+ok(tileCount === N, `${N} card tiles rendered (got ${tileCount})`);
 
 process.exit(failures ? 1 : 0);
