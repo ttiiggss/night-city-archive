@@ -2,9 +2,9 @@
  "meta": {
   "source": "Official Cyberpunk TCG card database (api.netdeck.gg backend behind cyberpunktcg.com)",
   "source_site": "https://cyberpunktcg.com/cards",
-  "synced_at": "2026-08-28 23:51 UTC",
-  "api_total": 147,
-  "card_count": 147,
+  "synced_at": "2026-08-29 23:53 UTC",
+  "api_total": 148,
+  "card_count": 148,
   "sets": [
    "PRM01",
    "embracingpowerretailstarterdeck",
@@ -3539,6 +3539,36 @@
    "ram": 2,
    "artist": "RUDCEF",
    "print_number": "103",
+   "printings": [],
+   "legality": "legal"
+  },
+  {
+   "id": "0f7c1c54-0e2e-44a5-ac7f-5263fbab21d3",
+   "external_id": "cb-memory-relapse",
+   "name": "Memory Relapse",
+   "subname": null,
+   "display_name": "Memory Relapse",
+   "slug": "memory-relapse",
+   "rules_text": "Spend a rival Unit. It can't ready until your next turn. If your ☆ (Street Cred) is an even number, draw 1.",
+   "flavor_text": null,
+   "printing_id": "ef9f2959-de87-4a54-be45-5c9dcc507aba",
+   "set": {
+    "code": "welcometonightcityretail",
+    "name": "Welcome to Night City — Retail"
+   },
+   "rarity": "Uncommon",
+   "color": "Green",
+   "card_type": "Program",
+   "is_eddiable": true,
+   "classifications": [
+    "Braindance"
+   ],
+   "keywords": [],
+   "cost": 3,
+   "power": null,
+   "ram": 2,
+   "artist": "Max Fiumara",
+   "print_number": "100",
    "printings": [],
    "legality": "legal"
   },
