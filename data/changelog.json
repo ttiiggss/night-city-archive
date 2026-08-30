@@ -1,5 +1,25 @@
 [
  {
+  "date": "2026-08-30",
+  "synced_at": "2026-08-30 23:56 UTC",
+  "card_count": 149,
+  "added": [
+   "Tyger's Whisper"
+  ],
+  "changed": [],
+  "images_ok": 149,
+  "images_failed": 0
+ },
+ {
+  "date": "2026-08-29",
+  "synced_at": "2026-08-29 23:55 UTC",
+  "card_count": 148,
+  "added": [],
+  "changed": [],
+  "images_ok": 148,
+  "images_failed": 0
+ },
+ {
   "date": "2026-08-29",
   "synced_at": "2026-08-29 23:53 UTC",
   "card_count": 148,

@@ -2,9 +2,9 @@
  "meta": {
   "source": "Official Cyberpunk TCG card database (api.netdeck.gg backend behind cyberpunktcg.com)",
   "source_site": "https://cyberpunktcg.com/cards",
-  "synced_at": "2026-08-29 23:53 UTC",
-  "api_total": 148,
-  "card_count": 148,
+  "synced_at": "2026-08-30 23:56 UTC",
+  "api_total": 149,
+  "card_count": 149,
   "sets": [
    "PRM01",
    "embracingpowerretailstarterdeck",
@@ -2773,6 +2773,37 @@
    "ram": 1,
    "artist": "CD PROJEKT RED",
    "print_number": "076",
+   "printings": [],
+   "legality": "legal"
+  },
+  {
+   "id": "31e5b986-1e67-439c-81fc-49f8938bd002",
+   "external_id": "cb-tyger-s-whisper",
+   "name": "Tyger's Whisper",
+   "subname": null,
+   "display_name": "Tyger's Whisper",
+   "slug": "tyger-s-whisper",
+   "rules_text": "{Play} You may Call a Legend for free. (You can only Call a Legend once per turn.)\n(Units with power 0 don't steal Gigs.)",
+   "flavor_text": null,
+   "printing_id": "28267ce7-17dc-42c4-b8c4-4235a7f3c3df",
+   "set": {
+    "code": "welcometonightcityretail",
+    "name": "Welcome to Night City — Retail"
+   },
+   "rarity": "Common",
+   "color": "Green",
+   "card_type": "Unit",
+   "is_eddiable": false,
+   "classifications": [
+    "Fixer",
+    "Tyger Claws"
+   ],
+   "keywords": [],
+   "cost": 2,
+   "power": 0,
+   "ram": 1,
+   "artist": "Bernard Kowalczuk",
+   "print_number": "090",
    "printings": [],
    "legality": "legal"
   },
