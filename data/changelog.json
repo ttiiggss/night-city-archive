@@ -1,5 +1,23 @@
 [
  {
+  "date": "2026-08-31",
+  "synced_at": "2026-08-31 23:58 UTC",
+  "card_count": 149,
+  "added": [],
+  "changed": [],
+  "images_ok": 149,
+  "images_failed": 0
+ },
+ {
+  "date": "2026-08-30",
+  "synced_at": "2026-08-30 23:57 UTC",
+  "card_count": 149,
+  "added": [],
+  "changed": [],
+  "images_ok": 149,
+  "images_failed": 0
+ },
+ {
   "date": "2026-08-30",
   "synced_at": "2026-08-30 23:56 UTC",
   "card_count": 149,
